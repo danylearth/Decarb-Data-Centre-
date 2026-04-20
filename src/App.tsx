@@ -124,7 +124,7 @@ const Speakers = () => {
     { name: 'Radhika Mehrotra', title: 'Head of Data & Channel Partnerships, Americas, CDP', linkedin: 'https://www.linkedin.com/in/radhika-mehrotra-5a06819/' },
     { name: 'Peter Hoegler', title: 'Sr Manager, Data Center Solutions, EDF Power Solutions North America', linkedin: 'https://www.linkedin.com/in/peter-hoegler/' },
     { name: 'Kelsyn Rooks', title: 'Dir. of Strategic Accounts - AI Solutions, Cupix', linkedin: 'https://www.linkedin.com/in/kelsynrooks/' },
-    { name: 'Jon Williams', title: 'Chairman & CEO, Viridi', linkedin: 'https://www.linkedin.com/in/jon-m-williams-1b741123a/' },
+    { name: 'Jon R. Williams', title: 'Chairman & CEO, Viridi', linkedin: 'https://www.linkedin.com/in/jon-m-williams-1b741123a/' },
     { name: 'Ambroise Lalloz', title: 'AI & Energy, First Block', linkedin: 'https://www.linkedin.com/in/ambroise-l/' },
     { name: 'Dr. Malio West', title: 'Senior Partner, Global Accounting', linkedin: 'https://www.linkedin.com/in/dr-malio-west-pmp-cma-999a2712/' },
     { name: 'Aundre Oldacre', title: 'Co-Founder & Managing Partner, AoRa Development', linkedin: 'https://www.linkedin.com/in/aundreoldacre/' },
