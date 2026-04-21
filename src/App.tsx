@@ -122,7 +122,7 @@ const Speakers = () => {
     { name: 'Jim Costello', title: 'Head of Real Estate Economics, Chief Economist, MSCI', linkedin: 'https://www.linkedin.com/in/jim-costello-9277174/' },
     { name: 'Sheila Oviedo', title: 'Head of Climate Risk Products, S&P', linkedin: 'https://www.linkedin.com/in/sheilaoviedo/' },
     { name: 'Radhika Mehrotra', title: 'Head of Data & Channel Partnerships, Americas, CDP', linkedin: 'https://www.linkedin.com/in/radhika-mehrotra-5a06819/' },
-    { name: 'Peter Hoegler', title: 'Sr Manager, Data Center Solutions, EDF Power Solutions North America', linkedin: 'https://www.linkedin.com/in/peter-hoegler/' },
+    { name: 'Peter Hoegler', title: 'Associate Director, Data Center Solutions, EDF Power Solutions North America', linkedin: 'https://www.linkedin.com/in/peter-hoegler/' },
     { name: 'Kelsyn Rooks', title: 'Dir. of Strategic Accounts - AI Solutions, Cupix', linkedin: 'https://www.linkedin.com/in/kelsynrooks/' },
     { name: 'Jon R. Williams', title: 'Chairman & CEO, Viridi', linkedin: 'https://www.linkedin.com/in/jon-m-williams-1b741123a/' },
     { name: 'Ambroise Lalloz', title: 'AI & Energy, First Block', linkedin: 'https://www.linkedin.com/in/ambroise-l/' },
@@ -133,6 +133,7 @@ const Speakers = () => {
     { name: 'Jay Peck', title: 'Managing Partner, Brookhaven Sustainability', linkedin: 'https://www.linkedin.com/in/jay-peck-64459725/' },
     { name: 'Eric Bosworth', title: 'Principal, Thermal Energy Insights', linkedin: 'https://www.linkedin.com/in/ericbosworth/' },
     { name: 'Matthew Kaplan', title: 'VP, Brightcore Energy', linkedin: 'https://www.linkedin.com/in/mattkaplan/' },
+    { name: 'Esther Tierney', title: 'Senior Product Manager, Trane Technologies', linkedin: 'https://www.linkedin.com/in/esther-tierney-31b25959/' },
     { name: 'Fulya Kocak', title: 'CEO & Founder, Fulya Kocak, LLC', linkedin: 'https://www.linkedin.com/in/fulyakocak/' },
     { name: 'David Deutsch', title: 'COO, New Power Solutions', linkedin: 'https://www.linkedin.com/in/dedeutsch/' },
     { name: 'Hassan Saleh', title: 'CEO, VTV Energy', linkedin: 'https://www.linkedin.com/in/hassan-saleh-457a9a170/' },
@@ -146,7 +147,6 @@ const Speakers = () => {
     { name: 'Brian Tormey', title: 'President, TitleVest', linkedin: '' },
     { name: 'Graeme Kavanagh', title: 'Partner and CRO, Accelerate Infrastructure Opportunities', linkedin: '' },
     { name: 'Alex Jahn', title: 'Program Director, NYSERDA', linkedin: '' },
-    { name: 'Chris Broadhurst', title: 'COO, Electron', linkedin: '' },
     { name: 'Scott Donachie', title: 'CEO, Decarb Summits', linkedin: 'https://www.linkedin.com/in/scott-donachie-5683787/' },
   ];
 
@@ -207,17 +207,16 @@ const Schedule = () => {
       sessions: [
         { time: '8:00–9:00 AM', title: 'Registration & Networking with Breakfast', type: 'break' },
         { time: '9:00–9:30 AM', title: 'Balancing Affordability & Reliability', speakers: ['Rajiv Bazaj, Vice President, Energy & Sustainability Solutions, Constellation'] },
-        { time: '9:30–10:00 AM', title: 'Hybrid Energy Systems: The Importance for Data Center Expansion', speakers: ['Peter Hoegler, Sr Manager, Data Center Solutions, EDF Power Solutions North America', 'Hassan Saleh, CEO, VTV Energy'] },
+        { time: '9:30–10:00 AM', title: 'Hybrid Energy Systems: The Importance for Data Center Expansion', speakers: ['Peter Hoegler, Associate Director, Data Center Solutions, EDF Power Solutions North America', 'Hassan Saleh, CEO, VTV Energy'] },
         { time: '10:00–10:30 AM', title: 'Coffee & Networking', type: 'break' },
         { time: '10:30–11:00 AM', title: 'Battery Energy Storage Systems (BESS) Solutions', speakers: ['Jon M. Williams, Chairman & CEO, Viridi'] },
         { time: '11:00–11:30 AM', title: 'Bring Your Own Capacity for Data Centers', speakers: ['Matthew Carmody, Sales Digital Infrastructure, Voltus', 'Scott Donachie (Moderator), CEO, Decarb Summits'] },
         { time: '11:30–11:50 AM', title: 'Fireside Chat: Onsite Power Generation Turnkey Solutions — Power Plant as a Service', speakers: ['David Deutsch, COO, New Power Solutions', 'Scott Donachie (Moderator), CEO, Decarb Summits'] },
         { time: '11:50 AM–12:20 PM', title: 'Building Data Centers in the Right Place', speakers: ['Larry Skennion (Moderator), CEO, Green Panther Advisory', 'Brian Tormey, President, TitleVest', 'Graeme Kavanagh, Partner and CRO, Accelerate Infrastructure Opportunities'] },
         { time: '12:20–1:00 PM', title: 'Lunch & Networking', type: 'break' },
-        { time: '1:00–1:40 PM', title: 'Waste Heat Recovery & Geothermal Solutions', speakers: ['Eric Bosworth (Moderator), Principal, Thermal Energy Insights', 'Matthew Kaplan, VP, Brightcore Energy', 'Ambroise Lalloz, AI & Energy, First Block', 'Alex Jahn, Program Director, NYSERDA'] },
+        { time: '1:00–1:40 PM', title: 'Waste Heat Recovery & Geothermal Solutions', speakers: ['Eric Bosworth (Moderator), Principal, Thermal Energy Insights', 'Matthew Kaplan, VP, Brightcore Energy', 'Ambroise Lalloz, AI & Energy, First Block', 'Alex Jahn, Program Director, NYSERDA', 'Esther Tierney, Senior Product Manager, Trane Technologies'] },
         { time: '1:40–2:10 PM', title: 'Behind-the-Meter Data Center Solutions & Microgrids', speakers: ['Fulya Kocak (Moderator), CEO & Founder, Fulya Kocak LLC', 'Malio West, Senior Partner, Global Accounting', 'Dennis Garrett, CEO, Blue Lake Clean Energy Group', 'Jay Peck, Managing Partner, Brookhaven Sustainability'] },
-        { time: '2:10–2:30 PM', title: 'Protecting the Grid with Data Center Expansion', speakers: ['Chris Broadhurst, COO, Electron'] },
-        { time: '2:30 PM', title: 'Closing Remarks', speakers: ['Scott Donachie, CEO, Decarb Summits'], type: 'closing' },
+        { time: '2:10 PM', title: 'Closing Remarks', speakers: ['Scott Donachie, CEO, Decarb Summits'], type: 'closing' },
       ],
     },
   ];
@@ -321,13 +320,12 @@ const Partners = () => (
         {[
           { name: 'Constellation Energy', url: 'https://www.constellationenergy.com' },
           { name: 'NYSERDA', url: 'https://www.nyserda.ny.gov' },
-          { name: 'Trane', url: 'https://www.trane.com' },
+          { name: 'Trane Technologies', url: 'https://www.tranetechnologies.com' },
           { name: 'Brightcore', url: 'https://www.brightcoreenergy.com' },
           { name: 'Voltus', url: 'https://www.voltus.co' },
           { name: 'CPower', url: 'https://cpowerenergy.com' },
           { name: 'Ainsworth GDI', url: 'https://www.gdi.com' },
           { name: 'Green Panther Advisory Services', url: 'https://www.greenpantheradvisory.com' },
-          { name: 'Electron', url: '#' },
         ].map(p => (
           <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="font-headline font-black text-white tracking-tighter text-sm uppercase opacity-60 hover:opacity-100 active:opacity-100 transition-all">{p.name}</a>
         ))}
