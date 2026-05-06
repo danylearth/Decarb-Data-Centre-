@@ -154,7 +154,7 @@ const Speakers = () => {
     { name: 'Alexander Jahn', title: 'Innovation Advisor, NYSERDA', linkedin: '' },
     { name: 'Martin Renkis', title: 'Executive Director, Data Center Infrastructure, Johnson Controls', linkedin: 'https://www.linkedin.com/in/martinrenkis/' },
     { name: 'Ruben Petit', title: 'CCO, Ener.co', linkedin: 'https://www.linkedin.com/in/ruben-petit-589316b9/' },
-    { name: 'Mick Gilbert', title: 'Board Member, Decarb Summits', linkedin: 'https://www.linkedin.com/in/michaelhgilbert/' },
+    { name: 'Michael (Mick) Gilbert, PE, CEM', title: 'Board Member, Decarb Summits', linkedin: 'https://www.linkedin.com/in/michaelhgilbert/' },
     { name: 'Will Pettitt', title: 'Global Geothermal Lead, Baker Hughes', linkedin: '' },
     { name: 'Scott Donachie', title: 'CEO, Decarb Summits', linkedin: 'https://www.linkedin.com/in/scott-donachie-5683787/' },
   ];
@@ -193,6 +193,7 @@ const Schedule = () => {
     {
       label: 'Day 1',
       date: 'May 13, 2026',
+      subtitle: 'Data Center Investing and Planning',
       sessions: [
         { time: '8:00–8:50 AM', title: 'Registration & Networking', type: 'break' },
         { time: '8:50–9:00 AM', title: 'Opening Remarks', speakers: ['Chas Peppers, Director, SOM IW, Skidmore, Owings & Merrill'] },
@@ -218,7 +219,7 @@ const Schedule = () => {
       sessions: [
         { time: '8:00–9:00 AM', title: 'Registration & Networking with Breakfast', type: 'break' },
         { time: '9:00–9:30 AM', title: 'Opening Remarks: Balancing Affordability & Reliability', speakers: ['Rajiv Bazaj, Vice President, Energy & Sustainability Solutions, Constellation'] },
-        { time: '9:30–10:00 AM', title: 'Hybrid Energy Systems: The Importance for Data Center Expansion', speakers: ['Mick Gilbert (Moderator), Board Member, Decarb Summits', 'Peter Hoegler, Associate Director, Data Center Solutions, EDF Power Solutions North America', 'Hassan Saleh, CEO, VTV Energy'] },
+        { time: '9:30–10:00 AM', title: 'Hybrid Energy Systems: The Importance for Data Center Expansion', speakers: ['Michael (Mick) Gilbert, PE, CEM (Moderator), Board Member, Decarb Summits', 'Peter Hoegler, Associate Director, EDF Power Solutions North America', 'Hassan Saleh, CEO, VTV Energy'] },
         { time: '10:00–10:30 AM', title: 'Coffee & Networking', type: 'break' },
         { time: '10:30–11:00 AM', title: 'Battery Energy Storage Systems (BESS) Solutions', subtitle: 'Peak shaving, resiliency, and fast-response grid support', speakers: ['Jon M. Williams, Chairman & CEO, Viridi'] },
         { time: '11:00–11:30 AM', title: 'Bring Your Own Capacity for Data Centers', speakers: ['Scott Donachie (Moderator), CEO, Decarb Summits', 'Matthew Carmody, Director of Digital Infrastructure, Voltus'] },
