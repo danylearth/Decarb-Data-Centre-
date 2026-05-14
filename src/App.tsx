@@ -150,7 +150,7 @@ const Speakers = () => {
     { name: 'Nidhi Chadda', title: 'Founder & CEO, Enzo Advisors LLC', linkedin: 'https://www.linkedin.com/in/nchadda/' },
     { name: 'Matthew Carmody', title: 'Director of Digital Infrastructure, Voltus', linkedin: '' },
     { name: 'Brian Tormey', title: 'President, TitleVest', linkedin: '' },
-    { name: 'Graeme Kavanagh', title: 'Partner and CRO, Accelerate Infrastructure Opportunities', linkedin: '' },
+    { name: 'Graeme Kavanagh', title: 'Partner and CRO, Accelerate Infrastructure Opportunities', linkedin: 'https://www.linkedin.com/in/gkavanagh/' },
     { name: 'Alexander Jahn', title: 'Innovation Advisor, NYSERDA', linkedin: '' },
     { name: 'Martin Renkis', title: 'Executive Director, Data Center Infrastructure, Johnson Controls', linkedin: 'https://www.linkedin.com/in/martinrenkis/' },
     { name: 'Ruben Petit', title: 'CCO, Ener.co', linkedin: 'https://www.linkedin.com/in/ruben-petit-589316b9/' },
