@@ -69,7 +69,7 @@ const Navbar = ({ onGetTicket }: { onGetTicket: () => void }) => {
 const Hero = ({ onGetTicket, event }: { onGetTicket: () => void; event: EventConfig }) => (
   <header className="relative min-h-svh flex items-center justify-center overflow-hidden pt-20">
     <div className="absolute inset-0 z-0">
-      <img alt="" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQR_69gLJFt7FDndpgvvekGm9rQAISfMTtKb2BIzPguFhx12MUgAuPKpDJhGOd-0PK8QEnjfSOhzifQ29OVtTQ0XMSFGAatVZVN8smIsqqvMRFPaY4-amNPZ7vyPczzYlaCVZE72NvH3lv2Ai3iFqfnQo79nc5X1-rm_6ZOkkYRluz7etxtiH8D08ZYnDkNpKMbW9r65kRkf5YuDLF9QPRyzX6whZ0tRY3s98NdV-p3M1S9rWRvPUM-BFIhOZmRhXtT3hJKuR8WWA" referrerPolicy="no-referrer" />
+      <img alt="" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" src={event.heroImage || "https://lh3.googleusercontent.com/aida-public/AB6AXuCQR_69gLJFt7FDndpgvvekGm9rQAISfMTtKb2BIzPguFhx12MUgAuPKpDJhGOd-0PK8QEnjfSOhzifQ29OVtTQ0XMSFGAatVZVN8smIsqqvMRFPaY4-amNPZ7vyPczzYlaCVZE72NvH3lv2Ai3iFqfnQo79nc5X1-rm_6ZOkkYRluz7etxtiH8D08ZYnDkNpKMbW9r65kRkf5YuDLF9QPRyzX6whZ0tRY3s98NdV-p3M1S9rWRvPUM-BFIhOZmRhXtT3hJKuR8WWA"} referrerPolicy="no-referrer" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
     </div>
     <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">

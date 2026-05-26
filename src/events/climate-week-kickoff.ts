@@ -7,6 +7,7 @@ const event: EventConfig = {
   dateBadge: 'SEPTEMBER 17, 2026 • NEW YORK CITY',
   tagline: 'Scaling the Future of Energy, Infrastructure & the Built Environment — A premier gathering of global leaders shaping the transition to a net-zero economy.',
   pageTitle: 'Climate Week Kickoff Summit 2026',
+  heroImage: '/climate-week-hero.png',
   ticketModalText: 'Secure your spot at the Climate Week Kickoff Summit.',
   ticketLinks: [
     { label: 'Register Now', sublabel: '— September 17, 2026', url: 'https://luma.com/gtealoor' },

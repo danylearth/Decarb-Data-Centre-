@@ -7,6 +7,7 @@ const event: EventConfig = {
   dateBadge: 'JULY 15, 2026 • NEW YORK CITY',
   tagline: 'Accelerating Building Decarbonization Through Artificial Intelligence — Exploring how AI, electrification, and advanced data platforms are transforming buildings into high-performance, fully electric assets.',
   pageTitle: 'AI Technology Summit 2026',
+  heroImage: '/ai-tech-hero.png',
   ticketModalText: 'Secure your spot at the AI Technology Summit.',
   ticketLinks: [
     { label: 'Register Now', sublabel: '— July 15, 2026', url: 'https://luma.com/gtealoor' },

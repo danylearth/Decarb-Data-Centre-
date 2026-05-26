@@ -43,6 +43,7 @@ export interface EventConfig {
   dateBadge: string;
   tagline: string;
   pageTitle: string;
+  heroImage?: string;
   ticketModalText: string;
   ticketLinks: TicketLink[];
   featuredSpeakers: FeaturedSpeaker[];
