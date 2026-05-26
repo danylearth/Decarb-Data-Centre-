@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM = 'Data Center Summit <onboarding@resend.dev>';
+const FROM = 'Climate Week Kickoff Summit <onboarding@resend.dev>';
 const NOTIFY_TO = 'scott.donachie@decarbsummits.com';
 
 function notificationHtml(data: {
@@ -16,7 +16,7 @@ function notificationHtml(data: {
 }) {
   return `
     <div style="font-family:sans-serif;padding:24px;background:#f4f4f4;">
-      <h2 style="margin:0 0 16px;">New Interest Sign-Up — Data Center Summit 2026</h2>
+      <h2 style="margin:0 0 16px;">New Interest Sign-Up — Climate Week Kickoff Summit 2026</h2>
       <table style="border-collapse:collapse;width:100%;background:#fff;border-radius:6px;overflow:hidden;">
         ${Object.entries({
           Name: `${data.firstName} ${data.lastName}`,
@@ -46,7 +46,7 @@ function welcomeHtml(firstName: string) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap" rel="stylesheet" />
-  <title>Welcome to Data Center Summit 2026</title>
+  <title>Welcome to Climate Week Kickoff Summit 2026</title>
 </head>
 <body style="margin:0;padding:0;background:#08092d;font-family:'Space Grotesk',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#08092d;padding:48px 0;">
@@ -81,7 +81,7 @@ function welcomeHtml(firstName: string) {
           <tr>
             <td style="padding:0 0 32px;">
               <p style="margin:0 0 16px;font-size:16px;color:#A7A7D2;line-height:1.7;">
-                You're now on the list for the <strong style="color:#ffffff;">Data Center Summit 2026</strong> — the premier gathering for industry leaders, developers, hyper scalers, and investors shaping the future of sustainable data infrastructure.
+                You're now on the list for the <strong style="color:#ffffff;">Climate Week Kickoff Summit</strong> — a premier gathering of global leaders shaping the transition to a net-zero economy across energy, infrastructure, and the built environment.
               </p>
               <p style="margin:0;font-size:16px;color:#A7A7D2;line-height:1.7;">
                 We'll keep you updated on speakers, agenda details, and future Decarb Summits events as they're announced.
@@ -96,8 +96,8 @@ function welcomeHtml(firstName: string) {
                 <tr>
                   <td style="padding:24px 28px;">
                     <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D4FF5B;">EVENT DETAILS</p>
-                    <p style="margin:8px 0 0;font-size:22px;font-weight:900;text-transform:uppercase;color:#ffffff;font-family:'Space Grotesk',Arial,sans-serif;">Data Center Summit 2026</p>
-                    <p style="margin:6px 0 0;font-size:14px;color:#A7A7D2;letter-spacing:0.1em;text-transform:uppercase;">May 13–14, 2026 &nbsp;•&nbsp; New York City</p>
+                    <p style="margin:8px 0 0;font-size:22px;font-weight:900;text-transform:uppercase;color:#ffffff;font-family:'Space Grotesk',Arial,sans-serif;">Climate Week Kickoff Summit</p>
+                    <p style="margin:6px 0 0;font-size:14px;color:#A7A7D2;letter-spacing:0.1em;text-transform:uppercase;">September 17, 2026 &nbsp;•&nbsp; SOM, 7 World Trade Center, NYC</p>
                   </td>
                 </tr>
               </table>
@@ -107,7 +107,7 @@ function welcomeHtml(firstName: string) {
           <!-- CTA button -->
           <tr>
             <td style="padding:0 0 48px;">
-              <a href="https://luma.com/l0inulj5"
+              <a href="https://luma.com/gtealoor"
                  style="display:inline-block;background:#D4FF5B;color:#08092d;font-family:'Space Grotesk',Arial,sans-serif;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.2em;padding:16px 40px;text-decoration:none;">
                 GET YOUR TICKET
               </a>
@@ -162,7 +162,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       resend.emails.send({
         from: FROM,
         to: email,
-        subject: 'You\'re on the list — Data Center Summit 2026',
+        subject: 'You\'re on the list — Climate Week Kickoff Summit 2026',
         html: welcomeHtml(firstName),
       }),
     ]);
