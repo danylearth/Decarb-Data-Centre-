@@ -3,10 +3,55 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM = 'Data Center Summit <onboarding@resend.dev>';
 const NOTIFY_TO = 'scott.donachie@decarbsummits.com';
 
-function notificationHtml(data: {
+interface EventEmailConfig {
+  fromName: string;
+  notificationHeading: string;
+  welcomeTitle: string;
+  welcomeSubject: string;
+  welcomeBody: string;
+  eventBoxName: string;
+  eventBoxDate: string;
+  ticketUrl: string;
+}
+
+const eventEmails: Record<string, EventEmailConfig> = {
+  'data-center-summit': {
+    fromName: 'Data Center Summit',
+    notificationHeading: 'New Interest Sign-Up — Data Center Summit 2026',
+    welcomeTitle: 'Welcome to Data Center Summit 2026',
+    welcomeSubject: "You're on the list — Data Center Summit 2026",
+    welcomeBody: 'the <strong style="color:#ffffff;">Data Center Summit 2026</strong> — the premier gathering for industry leaders, developers, hyper scalers, and investors shaping the future of sustainable data infrastructure.',
+    eventBoxName: 'Data Center Summit 2026',
+    eventBoxDate: 'May 13–14, 2026 &nbsp;•&nbsp; New York City',
+    ticketUrl: 'https://luma.com/l0inulj5',
+  },
+  'climate-week-kickoff': {
+    fromName: 'Climate Week Kickoff Summit',
+    notificationHeading: 'New Interest Sign-Up — Climate Week Kickoff Summit 2026',
+    welcomeTitle: 'Welcome to Climate Week Kickoff Summit 2026',
+    welcomeSubject: "You're on the list — Climate Week Kickoff Summit 2026",
+    welcomeBody: 'the <strong style="color:#ffffff;">Climate Week Kickoff Summit</strong> — a premier gathering of global leaders shaping the transition to a net-zero economy across energy, infrastructure, and the built environment.',
+    eventBoxName: 'Climate Week Kickoff Summit',
+    eventBoxDate: 'September 17, 2026 &nbsp;•&nbsp; SOM, 7 World Trade Center, NYC',
+    ticketUrl: 'https://luma.com/gtealoor',
+  },
+  'ai-tech-summit': {
+    fromName: 'AI Technology Summit',
+    notificationHeading: 'New Interest Sign-Up — AI Technology Summit 2026',
+    welcomeTitle: 'Welcome to AI Technology Summit 2026',
+    welcomeSubject: "You're on the list — AI Technology Summit 2026",
+    welcomeBody: 'the <strong style="color:#ffffff;">AI Technology Summit</strong> — where technology providers, building owners, and investors come together to accelerate building decarbonization through artificial intelligence and advanced electrification.',
+    eventBoxName: 'AI Technology Summit',
+    eventBoxDate: 'July 15, 2026 &nbsp;•&nbsp; SOM, 7 World Trade Center, NYC',
+    ticketUrl: 'https://luma.com/gtealoor',
+  },
+};
+
+const defaultEvent = eventEmails['data-center-summit'];
+
+function notificationHtml(cfg: EventEmailConfig, data: {
   firstName: string;
   lastName: string;
   company: string;
@@ -16,7 +61,7 @@ function notificationHtml(data: {
 }) {
   return `
     <div style="font-family:sans-serif;padding:24px;background:#f4f4f4;">
-      <h2 style="margin:0 0 16px;">New Interest Sign-Up — Data Center Summit 2026</h2>
+      <h2 style="margin:0 0 16px;">${cfg.notificationHeading}</h2>
       <table style="border-collapse:collapse;width:100%;background:#fff;border-radius:6px;overflow:hidden;">
         ${Object.entries({
           Name: `${data.firstName} ${data.lastName}`,
@@ -38,7 +83,7 @@ function notificationHtml(data: {
   `;
 }
 
-function welcomeHtml(firstName: string) {
+function welcomeHtml(cfg: EventEmailConfig, firstName: string) {
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +91,7 @@ function welcomeHtml(firstName: string) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap" rel="stylesheet" />
-  <title>Welcome to Data Center Summit 2026</title>
+  <title>${cfg.welcomeTitle}</title>
 </head>
 <body style="margin:0;padding:0;background:#08092d;font-family:'Space Grotesk',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#08092d;padding:48px 0;">
@@ -81,7 +126,7 @@ function welcomeHtml(firstName: string) {
           <tr>
             <td style="padding:0 0 32px;">
               <p style="margin:0 0 16px;font-size:16px;color:#A7A7D2;line-height:1.7;">
-                You're now on the list for the <strong style="color:#ffffff;">Data Center Summit 2026</strong> — the premier gathering for industry leaders, developers, hyper scalers, and investors shaping the future of sustainable data infrastructure.
+                You're now on the list for ${cfg.welcomeBody}
               </p>
               <p style="margin:0;font-size:16px;color:#A7A7D2;line-height:1.7;">
                 We'll keep you updated on speakers, agenda details, and future Decarb Summits events as they're announced.
@@ -96,8 +141,8 @@ function welcomeHtml(firstName: string) {
                 <tr>
                   <td style="padding:24px 28px;">
                     <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D4FF5B;">EVENT DETAILS</p>
-                    <p style="margin:8px 0 0;font-size:22px;font-weight:900;text-transform:uppercase;color:#ffffff;font-family:'Space Grotesk',Arial,sans-serif;">Data Center Summit 2026</p>
-                    <p style="margin:6px 0 0;font-size:14px;color:#A7A7D2;letter-spacing:0.1em;text-transform:uppercase;">May 13–14, 2026 &nbsp;•&nbsp; New York City</p>
+                    <p style="margin:8px 0 0;font-size:22px;font-weight:900;text-transform:uppercase;color:#ffffff;font-family:'Space Grotesk',Arial,sans-serif;">${cfg.eventBoxName}</p>
+                    <p style="margin:6px 0 0;font-size:14px;color:#A7A7D2;letter-spacing:0.1em;text-transform:uppercase;">${cfg.eventBoxDate}</p>
                   </td>
                 </tr>
               </table>
@@ -107,7 +152,7 @@ function welcomeHtml(firstName: string) {
           <!-- CTA button -->
           <tr>
             <td style="padding:0 0 48px;">
-              <a href="https://luma.com/l0inulj5"
+              <a href="${cfg.ticketUrl}"
                  style="display:inline-block;background:#D4FF5B;color:#08092d;font-family:'Space Grotesk',Arial,sans-serif;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.2em;padding:16px 40px;text-decoration:none;">
                 GET YOUR TICKET
               </a>
@@ -138,32 +183,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { firstName, lastName, company, position, email, phone } = req.body as {
+  const { firstName, lastName, company, position, email, phone, eventSlug } = req.body as {
     firstName: string;
     lastName: string;
     company: string;
     position: string;
     email: string;
     phone?: string;
+    eventSlug?: string;
   };
 
   if (!firstName || !lastName || !company || !position || !email) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
+  const cfg = (eventSlug && eventEmails[eventSlug]) || defaultEvent;
+  const from = `${cfg.fromName} <onboarding@resend.dev>`;
+
   try {
     await Promise.all([
       resend.emails.send({
-        from: FROM,
+        from,
         to: NOTIFY_TO,
         subject: `New interest sign-up: ${firstName} ${lastName} — ${company}`,
-        html: notificationHtml({ firstName, lastName, company, position, email, phone }),
+        html: notificationHtml(cfg, { firstName, lastName, company, position, email, phone }),
       }),
       resend.emails.send({
-        from: FROM,
+        from,
         to: email,
-        subject: 'You\'re on the list — Data Center Summit 2026',
-        html: welcomeHtml(firstName),
+        subject: cfg.welcomeSubject,
+        html: welcomeHtml(cfg, firstName),
       }),
     ]);
 
