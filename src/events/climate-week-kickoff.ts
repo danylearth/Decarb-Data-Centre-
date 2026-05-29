@@ -14,14 +14,14 @@ const event: EventConfig = {
   ],
   featuredSpeakers: [
     { name: 'Kelly Westby', initials: 'KW', title: 'Managing Director, Building Operations, Decarbonization & Efficiency, Steven Winter Associates', linkedin: 'https://www.linkedin.com/in/kelly-westby/' },
-    { name: 'Kevin Appleby', initials: 'KA', title: 'Managing Partner, RUHL TecDesign', linkedin: 'https://www.linkedin.com/in/kevin-appleby/' },
+    { name: 'Sadie McKeown', initials: 'SM', title: 'President & CEO, New York Green Bank', linkedin: 'https://www.linkedin.com/in/sadie-mckeown-1024a1a/' },
   ],
   speakers: [
     { name: 'Kelly Westby', title: 'Managing Director, Building Operations, Decarbonization & Efficiency, Steven Winter Associates', linkedin: 'https://www.linkedin.com/in/kelly-westby/' },
     { name: 'Scott Donachie', title: 'CEO, Decarb Summits', linkedin: 'https://www.linkedin.com/in/scott-donachie-5683787/' },
-    { name: 'Tom Fenton', title: 'Co-Founder & CEO, Furbnow', linkedin: 'https://www.linkedin.com/in/tom-fenton-62943ab0/' },
+    { name: 'Tom Fenton', title: 'CEO, Senze', linkedin: 'https://www.linkedin.com/in/tom-fenton-62943ab0/' },
     { name: 'Joseph Michael Daniels', title: 'ELIXR', linkedin: 'https://www.linkedin.com/in/mrjosephmichael/' },
-    { name: 'Kevin Appleby', title: 'Managing Partner, RUHL TecDesign', linkedin: 'https://www.linkedin.com/in/kevin-appleby/' },
+    { name: 'Sadie McKeown', title: 'President & CEO, New York Green Bank', linkedin: 'https://www.linkedin.com/in/sadie-mckeown-1024a1a/' },
     { name: 'Emmanuel Bizien', title: 'Global TTAP Business Development, Halton Group', linkedin: 'https://www.linkedin.com/in/emmanuel-bizien-83a74728/' },
   ],
   themes: [
