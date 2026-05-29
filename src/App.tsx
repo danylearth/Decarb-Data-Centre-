@@ -86,8 +86,11 @@ const Hero = ({ onGetTicket, event }: { onGetTicket: () => void; event: EventCon
   </header>
 );
 
-const FeaturedSpeakerCard: React.FC<{ speaker: FeaturedSpeaker }> = ({ speaker }) => (
-  <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden border border-outline-variant/50 block focus:outline-none">
+const FeaturedSpeakerCard: React.FC<{ speaker: FeaturedSpeaker }> = ({ speaker }) => {
+  const Wrapper = speaker.linkedin ? 'a' : 'div';
+  const linkProps = speaker.linkedin ? { href: speaker.linkedin, target: '_blank', rel: 'noopener noreferrer' } : {};
+  return (
+  <Wrapper {...linkProps} className="group relative overflow-hidden border border-outline-variant/50 block focus:outline-none">
     <div className="aspect-square overflow-hidden">
       {speaker.img ? (
         <img alt={speaker.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-focus:grayscale-0 group-active:grayscale-0 transition-[filter] duration-700 will-change-[filter]" style={{ objectPosition: speaker.pos }} src={speaker.img} />
@@ -103,11 +106,12 @@ const FeaturedSpeakerCard: React.FC<{ speaker: FeaturedSpeaker }> = ({ speaker }
           <h3 className="font-headline text-2xl text-white uppercase font-black">{speaker.name}</h3>
           <p className="text-secondary text-sm uppercase tracking-wider mt-1">{speaker.title}</p>
         </div>
-        <Linkedin className="w-5 h-5 text-secondary group-hover:text-primary group-focus:text-primary transition-colors flex-none mb-1" />
+        {speaker.linkedin && <Linkedin className="w-5 h-5 text-secondary group-hover:text-primary group-focus:text-primary transition-colors flex-none mb-1" />}
       </div>
     </div>
-  </a>
-);
+  </Wrapper>
+  );
+};
 
 const FeaturedSpeakers = ({ event }: { event: EventConfig }) => (
   <section className="py-32 bg-surface-container-low relative border-y border-outline-variant/30">
