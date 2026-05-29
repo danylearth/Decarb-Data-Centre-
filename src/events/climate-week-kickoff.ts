@@ -20,7 +20,7 @@ const event: EventConfig = {
     { name: 'Kelly Westby', title: 'Managing Director, Building Operations, Decarbonization & Efficiency, Steven Winter Associates', linkedin: 'https://www.linkedin.com/in/kelly-westby/' },
     { name: 'Scott Donachie', title: 'CEO, Decarb Summits', linkedin: 'https://www.linkedin.com/in/scott-donachie-5683787/' },
     { name: 'Tom Fenton', title: 'CEO, Senze', linkedin: 'https://www.linkedin.com/in/tom-fenton-62943ab0/' },
-    { name: 'Joseph Michael Daniels', title: 'ELIXR', linkedin: 'https://www.linkedin.com/in/mrjosephmichael/' },
+    { name: 'Joseph Michael Daniels', title: 'CEO, ELIXR', linkedin: 'https://www.linkedin.com/in/mrjosephmichael/' },
     { name: 'Sadie McKeown', title: 'President & CEO, New York Green Bank', linkedin: 'https://www.linkedin.com/in/sadie-mckeown-1024a1a/' },
     { name: 'Emmanuel Bizien', title: 'Global TTAP Business Development, Halton Group', linkedin: 'https://www.linkedin.com/in/emmanuel-bizien-83a74728/' },
   ],
